@@ -1,7 +1,7 @@
 const express = require('express'),
     app = express(),
     router = express.Router(),
-    routesModule = require('../app/routes/routesModule'),
+    routesModule = require('../routes/routesModule'),
     bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
