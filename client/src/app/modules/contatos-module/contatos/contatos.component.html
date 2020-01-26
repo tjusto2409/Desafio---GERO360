@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 wrapper">
+            <h1>{{ title }}</h1>
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-12">
+                <app-input-field [inputFields]="inputFields" [formGroup]="form"></app-input-field>
+
+                <button type="submit">{{ button.value }}</button>
+                <button (click)="resetar()" *ngIf="button.id == 2">Cancelar</button>
+            </form>
+
+            <hr />
+
+            <app-table [table]='table' *ngIf="contatos.length > 0"
+                (getIndex)="editar($event)" 
+                (getRow)="excluir($event)"></app-table>
+        </div>
+    </div>
+</div>
