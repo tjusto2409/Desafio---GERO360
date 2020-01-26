@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="input-fiel" [ngClass]="inputField?.class" *ngFor="let inputField of inputFields" [formGroup]="formGroup">
+        <label [attr.for]="inputField?.id">{{ inputField?.label }}</label>
+        <input [type]="inputField?.type" class ="col-12" [dropSpecialCharacters]="false"
+                [id]="inputField?.id"
+                [mask]='inputField?.mask'
+                [formControlName]='inputField?.control'>
+    </div>
+</div>

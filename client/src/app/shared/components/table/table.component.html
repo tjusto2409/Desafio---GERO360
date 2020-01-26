@@ -1,0 +1,18 @@
+<table [class]="table.class">
+    <tr>
+        <th *ngFor="let headers of table?.th">
+            {{ headers }}
+        </th>
+    </tr>
+    <tr *ngFor="let items of table?.td, let i = index" #tr>
+        <td *ngFor="let item of items | keys">
+            {{ items[item] }}
+        </td>
+        <td>
+            <button (click)="editar(i)">Editar</button>
+        </td>
+        <td>
+            <button (click)="excluir(tr, i)">Excluir</button>
+        </td>
+    </tr>
+</table>
