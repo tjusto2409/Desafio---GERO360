@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ContatosModulesModule } from './modules/contatos-module.module';
+import { ContatosModulesModule } from './modules/contatos-module/contatos-module.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
