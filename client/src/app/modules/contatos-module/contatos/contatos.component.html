@@ -6,13 +6,17 @@
             <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-12">
                 <app-input-field [inputFields]="inputFields" [formGroup]="form"></app-input-field>
 
-                <button type="submit">{{ button.value }}</button>
+                <button type="submit" [disabled]="!form.valid">{{ button.value }}</button>
                 <button (click)="resetar()" *ngIf="button.id == 2">Cancelar</button>
             </form>
+            
+            <p *ngIf="loading" class="load">Carregando...</p>
 
             <hr />
 
-            <app-table [table]='table' *ngIf="contatos.length > 0"
+            <app-table *ngIf="contatos.length > 0"
+                [table]='table'
+                [alterTable]='alterTable'
                 (getIndex)="editar($event)" 
                 (getRow)="excluir($event)"></app-table>
         </div>

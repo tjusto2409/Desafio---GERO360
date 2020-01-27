@@ -6,12 +6,14 @@ import { NgxMaskModule } from 'ngx-mask';
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import { TableComponent } from './components/table/table.component';
 import { KeysPipe } from './pipes/keys.pipe';
+import { ErrorControlComponent } from './components/error-control/error-control.component';
 
 @NgModule({
   declarations: [
     InputFieldComponent,
     TableComponent,
-    KeysPipe
+    KeysPipe,
+    ErrorControlComponent
   ],
   imports: [
     CommonModule,

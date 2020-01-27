@@ -4,6 +4,11 @@
         <input [type]="inputField?.type" class ="col-12" [dropSpecialCharacters]="false"
                 [id]="inputField?.id"
                 [mask]='inputField?.mask'
-                [formControlName]='inputField?.control'>
+                [formControlName]='inputField?.control'
+                [placeholder]='inputField?.placeholder'>
+        <app-error-control 
+            [mostrarError]= "verificaValidTouched(inputField?.control, inputField?.pattern, inputField?.exception)"
+            [msgError]="msgError">
+        </app-error-control>
     </div>
 </div>
